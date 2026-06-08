@@ -11,27 +11,30 @@
 
 ## Структура проекта и репозитория:
 
-credit_card_ml_deployment/
-├── app/ # Flask-приложение
-│ ├── init.py
-│ ├── api.py # Эндпоинты /predict и /health
-│ └── model_handler.py # Загрузка модели и предсказания
-├── models/ # Обучение и хранение модели
-│ ├── train_model.py # Скрипт обучения
-│ ├── model_v1.pkl # Обученная модель
-│ └── scaler.pkl # Scaler для признаков
-├── data/ # Датасет
-│ └── UCI_Credit_Card.csv
-├── docker/ # Конфигурация Docker
-│ └── Dockerfile
-├── logs/ # Логи сервиса
-│ └── api.log
-├── tests/ # Тесты
-│ └── test_api.py
-├── docker-compose.yml # Оркестрация сервисов
-├── requirements.txt # Зависимости
-├── AB_TEST_PLAN.md # План A/B-тестирования
-└── README.md # Документация
+credit-card-ml-deployment/
+├── app/
+│   ├── __init__.py
+│   ├── api.py              # Flask с /predict, /health + логирование
+│   └── model_handler.py    # Загрузка модели и predict()
+├── models/
+│   ├── train_model.py      # Скрипт обучения
+│   ├── model_v1.pkl        # Обученная модель
+│   └── scaler.pkl          # Масштабёр
+├── data/                   # (в .gitignore, не загружена)
+├── docker/
+│   └── Dockerfile
+├── logs/                   # (в .gitignore)
+├── screenshots/
+│   └── api_demo.png
+├── tests/
+│   └── test_api.py
+├── venv/                   # (в .gitignore)
+├── docker-compose.yml
+├── requirements.txt
+├── README.md
+├── AB_TEST_PLAN.md
+├── ARCHITECTURE.md
+└── .gitignore
 
 ## API Документация
 
