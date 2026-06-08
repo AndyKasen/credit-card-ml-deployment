@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data (датасет не грузим — он большой и публичный)
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# Virtual environment
+venv/
+
+# Environment
+.env
+
+# Логи (содержат историю запросов, не нужны в репозитории)
+logs/
